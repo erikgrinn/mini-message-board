@@ -5,8 +5,11 @@
   text-align: center;
 }
 
-.card {
+.message {
   padding: 2em;
+  margin: 6px;
+  border: 2px solid orange;
+  border-radius: 12px;
 }
 
 .read-the-docs {

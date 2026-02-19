@@ -35,6 +35,7 @@ app.get("/api", (req, res) => {
 
 app.post("/api/new", (req, res) => {
   console.log(req.body.message);
+  messages.push({ text: req.body.message.messageText, user: req.body.message.messageUser, added: new Date() });
   res.end();
 });
 

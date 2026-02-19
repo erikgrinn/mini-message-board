@@ -1,8 +1,10 @@
 import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 function New() {
   const [input, setInput] = useState("");
+  const [user, setUser] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload (optional?)
@@ -10,14 +12,23 @@ function New() {
     await fetch("http://localhost:8080/api/new", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: input }),
+      body: JSON.stringify({ message: { messageText: input, messageUser: user } }),
     });
     setInput(""); // Clear input after submit
+    setUser("");
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input name="message" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Type your message" />
+      <input
+        name="messageText"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        placeholder="Type your message"
+      />
+      <br></br>
+      <input name="messageUser" value={user} onChange={(e) => setUser(e.target.value)} placeholder="Type your name" />
+      <br></br>
       <button type="submit">Send</button>
     </form>
   );

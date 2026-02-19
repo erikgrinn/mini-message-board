@@ -27,7 +27,7 @@ function Home() {
       <div>
         <h3>{fetchedData.title}</h3>
         {fetchedData.messages.map((message, idx) => (
-          <div key={idx}>
+          <div className="message" key={idx}>
             <div>{message.text}</div>
             <div>{message.user}</div>
             <div>{message.added}</div>
