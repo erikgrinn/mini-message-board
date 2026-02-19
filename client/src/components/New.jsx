@@ -1,10 +1,12 @@
 import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../App.css";
 
 function New() {
   const [input, setInput] = useState("");
   const [user, setUser] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload (optional?)
@@ -16,6 +18,8 @@ function New() {
     });
     setInput(""); // Clear input after submit
     setUser("");
+
+    navigate("/");
   };
 
   return (
