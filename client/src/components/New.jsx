@@ -23,6 +23,9 @@ function New() {
   };
 
   return (
+    // probably method and action would also work without onSubmit
+    // but this way is more common for better control
+    // and also can do e.preventDefault()
     <form onSubmit={handleSubmit}>
       <input
         name="messageText"
