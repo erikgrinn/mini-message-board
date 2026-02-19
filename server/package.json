@@ -1,0 +1,24 @@
+{
+  "name": "mini-message-board",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/erikgrinn/mini-message-board#readme",
+  "bugs": {
+    "url": "https://github.com/erikgrinn/mini-message-board/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikgrinn/mini-message-board.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}
