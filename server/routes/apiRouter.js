@@ -17,7 +17,7 @@ const messages = [
 ];
 
 apiRouter.get("/", (req, res) => {
-  res.json(messages);
+  res.send({ title: "Mini Messageboard", messages });
 });
 
 module.exports = apiRouter;
